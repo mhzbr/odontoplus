@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OdontoPlus Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 0px;
+        }
+
+        h3 {
+            margin-top: 5px;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        .logo-container {
+            position: relative;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            
+        }
+
+        .container {
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: #f6f9ff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        opacity: 0.95;
+        }
+
+    </style>
+    <script>
+        function checkFields() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+
+            if (text1 === '' || text2 === '') {
+                alert("Preencha os campos Nome e CPF");
+            } else {
+                redirectToPage2(); //vai para a tela logado.html aqui ussei o // para bugar o script, dentro do script melhor usar // p comentar
+            }
+        }
+
+        function redirectToPage1() {
+            window.location.href = "app.html";
+        }
+
+        function redirectToPage2() {
+            window.location.href = "logado.html";
+        }
+
+        function redirectToPage3() {
+            window.location.href = "cadastro.html";
+        }
+
+        function redirectToPage4() {
+            window.location.href = "pagamento.html";
+        }    
+         
+        function redirectToPage5() {
+            window.location.href = "consultar.html";
+        }   
+
+        function redirectToPage6() {
+            window.location.href = "index.html";
+        }  
+
+        function redirectToPage7() {
+            window.location.href = "pagconfirmado.html";
+        }  
+
+        function redirectToPage8() {
+            window.location.href = "calen.html";
+        }  
+
+        function redirectToPage9() {
+            window.location.href = "cadcon.html";
+        } 
+
+    </script>  <!--Aqui nÃ£o usei div pq era mais facil amarrar direto no script-->
+    <meta charset="utf8"/>
+   
+</head>
+<body background="fundo.jpg">
+        
+    <header> <!--criei uma div 'logo-container' da imagem do logo para manter ele sempre no mesmo ponto em outras paginas-->
+        <div class="logo-container">
+             <a href="index.html" title="OdontoPlus - Homepage">
+                <img src="logo.png" alt="Logo" width="250">
+            </a>
+        </div>
+    </header>
+
+    <h1>Bem Vindo ao sistema Odonto<span style="color: rgb(1, 111, 189);">Plus</span> de Gerenciamento™</h1>
+    <br>
+    <div class="container">
+    <h3 style="color: #464646;">Selecione uma opção</h3>
+    <button onclick="redirectToPage5()" style="background-color:#397c3b ;">CONSULTAR PACIENTE</button>
+    <button onclick="redirectToPage3()">CADASTRAR PACIENTE</button>
+    <button onclick="redirectToPage4()" style="background-color: rgb(1, 111, 189);">PAGAMENTO</button>  <!--adicionei esse botao pra colocar um modulo de pag no sistema,prox passo Ã© o DATABASE-->
+    <button onclick="redirectToPage8()" style="background-color: rgb(205, 160, 63);">AGENDA DE CONSULTAS</button>
+    </div>
+</body>
+</html>
