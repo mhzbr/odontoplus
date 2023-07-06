@@ -68,57 +68,6 @@
         }
 
     </style>
-    <script>
-        function checkFields() {
-            var text1 = document.getElementById("text1").value;
-            var text2 = document.getElementById("text2").value;
-
-            if (text1 === '' || text2 === '') {
-                alert("Preencha os campos Nome e CPF");
-            } else {
-                redirectToPage2(); //vai para a tela logado.html aqui ussei o // para bugar o script, dentro do script melhor usar // p comentar
-            }
-        }
-
-        function redirectToPage1() {
-            window.location.href = "app.html";
-        }
-
-        function redirectToPage2() {
-            window.location.href = "logado.html";
-        }
-
-        function redirectToPage3() {
-            window.location.href = "cadastro.html";
-        }
-
-        function redirectToPage4() {
-            window.location.href = "pagamento.html";
-        }    
-         
-        function redirectToPage5() {
-            window.location.href = "consultar.html";
-        }   
-
-        function redirectToPage6() {
-            window.location.href = "index.html";
-        }  
-
-        function redirectToPage7() {
-            window.location.href = "pagconfirmado.html";
-        }  
-
-        function redirectToPage8() {
-            window.location.href = "calen.html";
-        }  
-
-        function redirectToPage9() {
-            window.location.href = "cadcon.html";
-        } 
-
-    </script>  <!--Aqui nÃ£o usei div pq era mais facil amarrar direto no script-->
-    <meta charset="utf8"/>
-   
 </head>
 <body background="fundo.jpg">
         
@@ -139,5 +88,6 @@
     <button onclick="redirectToPage4()" style="background-color: rgb(1, 111, 189);">PAGAMENTO</button>  <!--adicionei esse botao pra colocar um modulo de pag no sistema,prox passo Ã© o DATABASE-->
     <button onclick="redirectToPage8()" style="background-color: rgb(205, 160, 63);">AGENDA DE CONSULTAS</button>
     </div>
+    <script src="./script1.js"></script>
 </body>
 </html>
