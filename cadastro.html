@@ -1,129 +1,102 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <title>Cadastro - OdontoPlus</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-size: cover;
-      text-align: center;
-      padding-top: 5px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - OdontoPlus</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function checkFields() {
+          var text1 = document.getElementById("text1").value;
+          var text2 = document.getElementById("text2").value;
 
-    h1 {
-      color: #333;
-    }
+          if (text1 === '' || text2 === '') {
+              alert("Preencha os campos Nome e CPF");
+          } else {
+              redirectToPage2(); //vai para a tela logado.html aqui ussei o // para bugar o script, dentro do script melhor usar // p comentar
+          }
+      }
 
-    .container {
-      max-width: 400px;
-      margin: 0 auto;
-      background-color: #f6f9ff;
-      padding-bottom: 0px;
-      padding-left:20px;
-      padding-top: 20px;
-      padding-right: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+      function redirectToPage1() {
+          window.location.href = "app.html";
+      }
 
-    .form-group {
-      margin-bottom: 15px;
-    }
+      function redirectToPage2() {
+          window.location.href = "logado.html";
+      }
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-      color: #464646;
-      font-weight: bold;
-    }
+      function redirectToPage3() {
+          window.location.href = "cadastro.html";
+      }
 
-    input[type="text"],
-    input[type="email"] {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
+      function redirectToPage4() {
+          window.location.href = "pagamento.html";
+      }    
+       
+      function redirectToPage5() {
+          window.location.href = "consultar.html";
+      }   
 
-    button {
-      text-align: center;
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 16px;
-      margin: 20px;
-    }
+      function redirectToPage6() {
+          window.location.href = "index.html";
+      }  
 
-    button:hover {
-      background-color: #45a049;
-    }
+      function redirectToPage7() {
+          window.location.href = "pagconfirmado.html";
+      }  
 
-    .logo-container {
-            position: relative;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            
-        }
+      function redirectToPage8() {
+          window.location.href = "calen.html";
+      }  
 
-    a:-webkit-any-link {
-        color: -webkit-link;
-        cursor: pointer;
-        text-decoration: none;
-        
-    }
+      function redirectToPage9() {
+          window.location.href = "cadcon.html";
+      } 
 
-  </style>
-  <meta charset="utf8"/>
+  </script>  <!--Aqui nÃ£o usei div pq era mais facil amarrar direto no script-->
 </head>
-<body  background="fundo.jpg">
+<body>
     <header>
-        <div class="logo-container">
-            <a href="index.html" title="OdontoPlus - Homepage">
-                <img src="logo.png" alt="Logo" width="250">
-            </a>
+        <div class="logo">
+             <a href="index.html" title="OdontoPlus - Homepage"><img src="logo.png" alt="Logo" width="250"></a>
         </div>
     </header>
 
-  <div class="container">
-    <h1>Cadastro de Pa<span style="color: #016fbd;">ciente</span></h1>
-    <form action="cadcon.html">
-      <div class="form-group">
-        <label for="nome">Nome do Paciente:</label>
-        <input type="text" id="nome" name="nome" required placeholder="Digite o nome completo..." >
-      </div>
+    <div class="main-container">
+        <div class="container-cadastro">
+            <h1>Cadastro de Pa<span style="color: #016fbd;">ciente</span></h1>
 
-      <div class="form-group">
-        <label for="endereco">Endereço:</label>
-        <input type="text" id="endereco" name="endereco" required placeholder="Digite o endereço (Rua, Número, Bairro, Cidade)...">
-      </div>
+            <form action="cadcon.html">
+              <div class="form-group">
+                <label for="nome">Nome do Paciente:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite o nome completo..." >
+              </div>
+        
+              <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required placeholder="Digite o endereço (Rua, Número, Bairro, Cidade)...">
+              </div>
+        
+              <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required placeholder="Digite o telefone/celular com DD...">
+              </div>
+        
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite o e-mail...">
+              </div> 
+            </form>
 
-      <div class="form-group">
-        <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="telefone" required placeholder="Digite o telefone/celular com DD...">
-      </div>
-
-      <div class="form-group">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required placeholder="Digite o e-mail...">
-      </div> 
-    </form>
-
-    <div>
-      <a href="cadcon.html"><button style="background-color: rgb(34, 192, 42);" onclick="redirectToPage9()">CADASTRAR</button> </a>
+            <div class="botoes-cadastro">
+                <div>
+                    <a href="index.html"><button style="background-color: rgb(87, 127, 187);" onclick="redirectToPage6()">VOLTAR</button> </a>
+                </div>  
+                <div>
+                    <a href="cadcon.html"><button style="background-color: rgb(34, 192, 42);" onclick="redirectToPage9()">CADASTRAR</button> </a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div>
-      <a href="index.html"><button style="background-color: rgb(87, 127, 187);" onclick="redirectToPage6()">VOLTAR</button> </a>
-  </div>
-
-  </div>
-
 </body>
 </html>
