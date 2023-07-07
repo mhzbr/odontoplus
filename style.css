@@ -201,7 +201,7 @@ label {
 
 /*-------------PAGINA LOGADO--------------*/
 .container-logado {
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 15%;
     background-color: #fff;
@@ -236,7 +236,7 @@ label {
 
 /*--------PAGINA CADCON (CADASTRO CONFIRMADO)-----------*/
 .container-cadcon {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     background-color: #ffffff;
     padding: 20px;
@@ -250,7 +250,7 @@ label {
 
 /*--------PAGINA PAGCON (PAGAMENTO CONFIRMADO)-----------*/
 .container-pagconfirmado {
-    max-width: 400px;
+    max-width: 100%;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
