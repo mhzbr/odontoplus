@@ -2,69 +2,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css" />
     <title>Pagamento Concluído</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-size: cover;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-
-        .logo-container {
-            position: relative;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        p {
-            margin-bottom: 20px;
-        }
-
-        .back-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .back-btn:hover {
-            background-color: #45a049;
-        }
-    </style>
 </head>
 <body background="fundo.jpg">
-    <header> <!--imagem do logo para manter ele sempre no mesmo ponto em outras paginas-->>
-        <div class="logo-container">
-             <a href="index.html" title="OdontoPlus - Homepage">
-                <img src="logo.png" alt="Logo" width="250">
-            </a>
+    <header>
+        <div class="logo">
+             <a href="index.html" title="OdontoPlus - Homepage"><img src="logo.png" alt="Logo" width="250"></a>
         </div>
     </header>
 
-    <div class="container">
-        <h2>Pagamento Concluído</h2>
-        <p>O pagamento foi processado com sucesso.</p>
-        <p>Obrigado pela preferencia!</p>
-        <a class="back-btn" href="index.html">Voltar à página inicial</a> <!--esse botao volta pro comeco USEI UMA DIV DE CLASSE CONTAINER para fazer o redirecionanmento-->
+    <div class="main-container">
+        <div class="container-pagconfirmado">
+            <h2>Pagamento Con<span>cluído</span></h2>
+            <p>O pagamento foi processado com sucesso.</p>
+            <p>Obrigado pela preferencia!</p>
+            <a class="back-btn" href="index.html"><button style="background-color: rgb(87, 127, 187);" onclick="redirectToPage6()">VOLTAR</button></a> <!--esse botao volta pro comeco USEI UMA DIV DE CLASSE CONTAINER para fazer o redirecionanmento-->
+        </div>
     </div>
+
 </body>
 </html>
