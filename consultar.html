@@ -1,73 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultar - OdontoPlus</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-size: cover;
-            text-align: center;
-            padding-top: 5px;
-        }
-
-        h1 {
-            color: #333;
-            margin-top: 0px;
-            margin-bottom: 50px;
-        }
-
-        .container {
-        max-width: 400px;
-        margin: 0 auto;
-        background-color: #f6f9ff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        input[type="text"] {
-            width: 300px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            margin: 20px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        label {
-            color: #464646;
-        }
-
-        header {
-            text-align: center;
-        }
-
-        .logo-container {
-            position: relative;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css" />
     <script>
         function checkFields() {
             var text1 = document.getElementById("text1").value;
@@ -80,36 +17,73 @@
             }
         }
 
+        function redirectToPage1() {
+            window.location.href = "app.html";
+        }
+
+        function redirectToPage2() {
+            window.location.href = "logado.html";
+        }
+
+        function redirectToPage3() {
+            window.location.href = "cadastro.html";
+        }
+
+        function redirectToPage4() {
+            window.location.href = "pagamento.html";
+        }    
+         
+        function redirectToPage5() {
+            window.location.href = "consultar.html";
+        }   
 
         function redirectToPage6() {
             window.location.href = "index.html";
-        }   
-    </script>  <!--Aqui nÃ£o usei div pq era mais facil amarrar direto no script-->
-    <meta charset="utf8"/>
+        }  
 
+        function redirectToPage7() {
+            window.location.href = "pagconfirmado.html";
+        }  
+
+        function redirectToPage8() {
+            window.location.href = "calen.html";
+        }  
+
+        function redirectToPage9() {
+            window.location.href = "cadcon.html";
+        } 
+
+    </script>  <!--Aqui nÃ£o usei div pq era mais facil amarrar direto no script-->
 </head>
-<body  background="fundo.jpg">
+<body>
     <header>
-        <div class="logo-container">
-            <a href="index.html" title="OdontoPlus - Homepage">
-                <img src="logo.png" alt="Logo" width="250">
-            </a>
+        <div class="logo">
+             <a href="index.html" title="OdontoPlus - Homepage"><img src="logo.png" alt="Logo" width="250"></a>
         </div>
     </header>
-    <div class="container">
-        <h1>Consulta de Pa<span style="color: rgb(1, 111, 189);">ciente</span></h1>
-        
-        <label><b>Nome: </b></label>
-        <input type="text" id="text1" placeholder="digite o nome do paciente..."><br><br>
+    <div class="main-container">
+        <div class="container-consultar">
+            <h1>Consulta de Pa<span style="color: rgb(1, 111, 189);">ciente</span></h1>
+            
+            <div class="nome">
+                <label><b>Nome: </b></label>
+                <input type="text" id="text1" placeholder="digite o nome do paciente..."><br><br>
+            </div>
 
-        <label><b>CPF: </b></label>
-        <input type="text" id="text2" placeholder="XXX.XXX.XXX-XX"><br><br>
-        
-        <button style="background-color: rgb(87, 127, 187);" onclick="redirectToPage6()">VOLTAR</button>
-    
-        <div>
-            <a href="logado.html"><button style="background-color: rgb(34, 192, 42);" onclick="redirectToPage10()">CONSULTAR</button> </a>
-          </div>
+            <div class="espacamento"></div>
+            
+            <div class="cpf">
+                <label><b>CPF: </b></label>
+                <input type="text" id="text2" placeholder="XXX.XXX.XXX-XX"><br><br>
+            </div>
+            
+            <div class="botoes-consultar">
+                <button style="background-color: rgb(87, 127, 187);" onclick="redirectToPage6()">VOLTAR</button>
+                <div>
+                    <a href="logado.html"><button style="background-color: rgb(34, 192, 42);" onclick="redirectToPage10()">CONSULTAR</button> </a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
