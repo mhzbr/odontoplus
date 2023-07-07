@@ -46,6 +46,7 @@ button {
 }
 .container-home {
     max-width: 100%;
+    max-weight: 100%;
     margin: 0 auto;
     margin-bottom: 15%;
     background-color: #f6f9ff;
