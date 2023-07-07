@@ -251,7 +251,7 @@ label {
 /*--------PAGINA PAGCON (PAGAMENTO CONFIRMADO)-----------*/
 .container-pagconfirmado {
     max-width: 100%;
-    max-height: 60%;
+    max-wheight: 60%;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
