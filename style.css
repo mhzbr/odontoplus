@@ -61,7 +61,7 @@ button {
 
 /*-------------PAGINA CONSULTAR--------------*/
 .container-consultar {
-    width: 50%;
+    width: auto;
     margin: 0 auto;
     margin-bottom: 15%;
     background-color: #f6f9ff;
