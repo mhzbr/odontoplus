@@ -1,148 +1,106 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagamento - OdontoPlus</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-size: cover;
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        function checkFields() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+
+            if (text1 === '' || text2 === '') {
+                alert("Preencha os campos Nome e CPF");
+            } else {
+                redirectToPage2(); //vai para a tela logado.html aqui ussei o // para bugar o script, dentro do script melhor usar // p comentar
+            }
         }
 
-        header {
-            text-align: center;
+        function redirectToPage1() {
+            window.location.href = "app.html";
         }
 
-        h2 {
-            color: #333;
-            text-align: center;
-            margin-top: 0px;
+        function redirectToPage2() {
+            window.location.href = "logado.html";
         }
 
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #f6f9ff;
-            padding-bottom: 35px;
-            padding-left:20px;
-            padding-top: 20px;
-            padding-right: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        function redirectToPage3() {
+            window.location.href = "cadastro.html";
         }
 
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            margin-left: 20px;
-        }
+        function redirectToPage4() {
+            window.location.href = "pagamento.html";
+        }    
+         
+        function redirectToPage5() {
+            window.location.href = "consultar.html";
+        }   
 
-        button:hover {
-            background-color: #45a049;
-        }
+        function redirectToPage6() {
+            window.location.href = "index.html";
+        }  
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #333;
-            font-weight: bold;
-        }
+        function redirectToPage7() {
+            window.location.href = "pagconfirmado.html";
+        }  
 
-        select, input[type="text"], input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
+        function redirectToPage8() {
+            window.location.href = "calen.html";
+        }  
 
-        #pix, #cartao, #dinheiro {
-            display: none;
-        }
+        function redirectToPage9() {
+            window.location.href = "cadcon.html";
+        } 
 
-        h3 {
-            color: #333;
-            margin-top: 20px;
-        }
-
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: #fff;
-            cursor: pointer;
-            border: none;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        a:-webkit-any-link {
-        color: -webkit-link;
-        cursor: pointer;
-        text-decoration: none;
-        }
-
-        #botoes {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-    </style>
+    </script>  <!--Aqui nÃ£o usei div pq era mais facil amarrar direto no script-->
 </head>
-<body  background="fundo.jpg">
-
+<body>
     <header>
-        <div class="logo-container">
-            <a href="index.html" title="OdontoPlus - Homepage">
-                <img src="logo.png" alt="Logo" width="250">
-            </a>
+        <div class="logo">
+             <a href="index.html" title="OdontoPlus - Homepage"><img src="logo.png" alt="Logo"></a>
         </div>
     </header>
 
+    <div class="main-container">
+        <div class="container-pagamento"> <!--aqui estava 'form', mudei para DIV pois o form estava bugando os botoes e só dava refresh na pagina-->
+            <h2>Método de Paga<span style="color: rgb(1, 111, 189);">mento</span></h2>
+
+            <label for="opcao">Selecione a forma de pagamento:</label>
+
+            <select id="opcao" name="opcao">
+                <option disabled selected value="">PIX, Cartão de Crédito, Dinheiro</option> <!--coloquei um 'placeholder' aqui-->
+                <option value="pix">PIX</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="dinheiro">Dinheiro</option>
+            </select>
     
-    <div class="container"> <!--aqui estava 'form', mudei para DIV pois o form estava bugando os botoes e só dava refresh na pagina-->
-        <h2>Método de Paga<span style="color: rgb(1, 111, 189);">mento</span></h2>
-        <label for="opcao">Selecione a forma de pagamento:</label>
-        <select id="opcao" name="opcao">
-            <option disabled selected value="">PIX, Cartão de Crédito, Dinheiro</option> <!--coloquei um 'placeholder' aqui-->
-            <option value="pix">PIX</option>
-            <option value="cartao">Cartão de Crédito</option>
-            <option value="dinheiro">Dinheiro</option>
-        </select>
-
-        <div id="pix" style="text-align: center;"> <!--aqui no pagamento por PIX coloquei uma img genérica de QR code para escanear e a opcao de chave-->
-            <h3 style="margin-top: 0px;">Pagamento PIX</h3><br>
-            <label for="chavePix">QR Code</label>
-            <img src="qrcode.png" width="350px"><br><br>
-            <label>Chave PIX: <ins>odontoplus@pagamentopix.br</ins></label><br><br>
-        </div>
-
-        <div id="cartao"> <!--no pagamento em cartao precisaria linkar com algum sistema de pagamento com maquininhas de cartao-->
-            <h3>Pagamento com Cartão de Crédito</h3>
-            <label for="numeroCartao">Digite o valor do pagamento:</label>
-            <input type="text" id="numeroCartao" name="numeroCartao">
-        </div>
-
-        <div id="dinheiro"> <!-- voce seleciona o valor pago e o troco para ficar registrado no histórico a forma de pagamento e todos os valores da transação-->
-            <h3>Pagamento em Dinheiro</h3>
-            <label>Valor do Pagamento: </label><input type="text" id="valorPagamento" name="valorPagamento" placeholder="Insira o valor pago pelo paciente..">
-            <label>Valor do Troco:</label><input type="text" id="valorTroco" name="valorTroco" placeholder="Insira o valor do troco, caso haja...">
-            <!-- Aqui da pra add opcoes do dindin como o troco -->
-        </div>
-
-        <!-- <input type="submit" value="Finalizar Pagamento"> comente esse botão pra ficar somente com dois, linkarei o botão de 'CONCLUIR PAGAMENTO' para a pagina pagcon.html-->
-
-        <div id="botoes">
-                <button onclick="redirectToPage6()" style="background-color: rgb(87, 127, 187);">VOLTAR</button>
-                <button onclick="redirectToPage7()">CONCLUIR PAGAMENTO</button>
+            <div id="pix" style="text-align: center;"> <!--aqui no pagamento por PIX coloquei uma img genérica de QR code para escanear e a opcao de chave-->
+                <h3 style="margin-top: 0px;">Pagamento PIX</h3><br>
+                <label for="chavePix">QR Code</label>
+                <img src="qrcode.png" width="350px"><br><br>
+                <label>Chave PIX: <ins>odontoplus@pagamentopix.br</ins></label><br><br>
+            </div>
+    
+            <div id="cartao"> <!--no pagamento em cartao precisaria linkar com algum sistema de pagamento com maquininhas de cartao-->
+                <h3>Pagamento com Cartão de Crédito</h3>
+                <label for="numeroCartao">Digite o valor do pagamento:</label>
+                <input type="text" id="numeroCartao" name="numeroCartao">
+            </div>
+    
+            <div id="dinheiro"> <!-- voce seleciona o valor pago e o troco para ficar registrado no histórico a forma de pagamento e todos os valores da transação-->
+                <h3>Pagamento em Dinheiro</h3>
+                <label>Valor do Pagamento: </label><input type="text" id="valorPagamento" name="valorPagamento" placeholder="Insira o valor pago pelo paciente..">
+                <label>Valor do Troco:</label><input type="text" id="valorTroco" name="valorTroco" placeholder="Insira o valor do troco, caso haja...">
+                <!-- Aqui da pra add opcoes do dindin como o troco -->
+            </div>
+    
+            <!-- <input type="submit" value="Finalizar Pagamento"> comentei esse botão pra ficar somente com dois, linkarei o botão de 'CONCLUIR PAGAMENTO' para a pagina pagcon.html-->
+    
+            <div class  ="botoes-pagamento">
+                    <button onclick="redirectToPage6()" style="background-color: rgb(87, 127, 187);">VOLTAR</button>
+                    <button onclick="redirectToPage7()">CONCLUIR PAGAMENTO</button>
+            </div>
         </div>
     </div>
 
@@ -171,6 +129,5 @@
             window.location.href = "pagconfirmado.html";
         }   
     </script>  <!--aqui não usei DIV fiz amarrado direto no script usando o FUNCTION com o REDIRECT e setei uma pagina qualquer e nomei com a pagina que era pra redirecionar-->
-
 </body>
 </html>
