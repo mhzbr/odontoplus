@@ -484,7 +484,7 @@ body {
 
 @media screen and (max-width: 1000px) {
   body {
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
   }
   .container {
