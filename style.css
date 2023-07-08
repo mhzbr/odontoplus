@@ -37,6 +37,9 @@ button {
     font-weight: bold;
     margin: 20px;
 }
+span {
+    color: #016fbd;
+}
 /*--------------PAGINA HOME---------------*/
 .subtitulo {
     display: flex;
@@ -194,4 +197,66 @@ label {
 .container-pagamento h3 {
     margin-top: 15px;
     margin-bottom: 20px;
+}
+
+/*-------------PAGINA LOGADO--------------*/
+.container-logado {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 15%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.paciente {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.paciente .nome {
+    font-weight: bold;
+    color: #333;
+    font-size: 20px;
+}
+
+.paciente .status {
+    margin-top: 5px;
+    color: #666;
+}
+.container-logado h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.container-logado .botao-voltar {
+    display: flex;
+    justify-content: center;
+}
+
+/*--------PAGINA CADCON (CADASTRO CONFIRMADO)-----------*/
+.container-cadcon {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #1bb3ce;
+    text-align: center;
+}
+.container-cadcon h1{
+    margin-bottom: 10px;
+}
+
+/*--------PAGINA PAGCON (PAGAMENTO CONFIRMADO)-----------*/
+.container-pagconfirmado {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.container-pagconfirmado h2{
+    margin-bottom: 10px;
 }

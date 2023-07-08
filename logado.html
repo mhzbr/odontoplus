@@ -3,85 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <title>Status do Paciente</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      background-size: cover;
-      text-align: center;
-      padding-top: 100px;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    .container {
-      max-width: 40%;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            margin: 20px;
-        }
-
-
-    .paciente {
-      text-align: left;
-      margin-bottom: 20px;
-    }
-
-    .paciente .nome {
-      font-weight: bold;
-      color: #333;
-      font-size: 20px;
-    }
-
-    .paciente .status {
-      margin-top: 5px;
-      color: #666;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body background="fundo.jpg">
-  <div class="container">
-    <h1>Status do Paciente</h1>
-    
-    <div class="paciente">
-      <div class="nome">Nome do Paciente</div>
-      <div class="status">Status: Status do Paciente</div>
+  <header>
+    <div class="logo">
+         <a href="index.html" title="OdontoPlus - Homepage"><img src="logo.png" alt="Logo" width="250"></a>
     </div>
-    
-    <div class="paciente">
-      <div class="nome">Alta prevista</div>
-      <div class="status">X dias</div>
-    </div>
-    
-    <div class="paciente">
-      <div class="nome">Data de Internação</div>
-      <div class="status">XX/XX/XXXX</div>
-    </div>
-    
-    <div class="paciente">
-      <div class="nome">Medico responsavel</div>
-      <div class="status">Nome do Médico</div>
-    </div>
+  </header>
+  <div class="main-container">
+    <div class="container-logado">
+      <h1>Status do Pa<span>ciente</span></h1>
+      
+      <div class="paciente">
+        <div class="nome">Nome do Paciente</div>
+        <div class="status">Status: Status do Paciente</div>
+      </div>
+      
+      <div class="paciente">
+        <div class="nome">Data da última consulta</div>
+        <div class="status">XX/XX/XXXX</div>
+      </div>
+      
+      <div class="paciente">
+        <div class="nome">Medico responsável</div>
+        <div class="status">Dr. Fulano de tal</div>
+      </div>
+      
+      <div class="paciente">
+        <div class="nome">Tipo de consulta</div>
+        <div class="status">Normal / retorno</div>
+      </div>
+  
+      <div class="paciente">
+        <div class="nome">Tipo de pagamento</div>
+        <div class="status">PIX / Cartao / Dinheiro</div>
+      </div>
 
-    <!-- Botão para voltar para a tela inicial -->
-    
-      <a href="index.html"><button style="background-color: rgb(87, 127, 187);" onclick="redirectToPage6()">VOLTAR</button>
+      <a href="index.html" class="botao-voltar"><button style="background-color: rgb(87, 127, 187);" onclick="redirectToPage6()">VOLTAR</button>
+    </div>
   </div>
 </body>
 </html>

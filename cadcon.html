@@ -2,45 +2,27 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
   <title>Cadastro Concluido</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      background-size: cover;
-      text-align: center;
-      padding-top: 300px;
-    }
-
-    h1 {
-      color: #016ebc;
-    }
-
-    p {
-      color: #000000;
-      font-size: 30px;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px #1bb3ce;
-    }
-  </style>
   <script>
     setTimeout(function() {
       window.location.href = "index.html";
     }, 3000); // Redireciona para a página inicial após 3 segundos (3000 milissegundos)
   </script>
 </head>
-<body background="fundo.jpg">
-  <div class="container">
-    <h1>Cadastro Concluido</h1>
-    <p>O seu cadastro foi concluido com sucesso!</p>
-    <p>Obrigado por se cadastrar.</p>
+<body>
+  <header>
+    <div class="logo">
+         <a href="index.html" title="OdontoPlus - Homepage"><img src="logo.png" alt="Logo" width="250"></a>
+    </div>
+  </header>
+  <div class="main-container">
+    <div class="container-cadcon">
+      <h1>Cadastro Con<span>cluido</span></h1>
+      <p>O cadastro do paciente foi concluido com sucesso!</p>
+      <p>Obrigado por cadastrá-lo.</p>
+    </div>
   </div>
+
 </body>
 </html>
