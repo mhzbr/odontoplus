@@ -202,7 +202,11 @@ label {
 
 /*-------------PAGINA LOGADO--------------*/
 .container-logado {
+
+    width: 600px;
+
     width: 60%;
+
     margin: 0 auto;
     margin-bottom: 15%;
     background-color: #fff;
@@ -237,11 +241,18 @@ label {
 
 /*--------PAGINA CADCON (CADASTRO CONFIRMADO)-----------*/
 .container-cadcon {
+
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+
     max-width: 100%;
     margin: 0 auto;
     background-color: #ffffff;
     padding: 30px;
     font-size: 25px;
+
     border-radius: 5px;
     box-shadow: 0 2px 5px #1bb3ce;
     text-align: center;
@@ -252,16 +263,26 @@ label {
 
 /*--------PAGINA PAGCON (PAGAMENTO CONFIRMADO)-----------*/
 .container-pagconfirmado {
+
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+
     max-width: 100%;
     margin: 0 auto;
     font-size: 25px;
     background-color: #fff;
     padding: 80px;
     border-radius: 20px;
+
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 .container-pagconfirmado h2{
     margin-bottom: 10px;
+
 }
+
+}
+
